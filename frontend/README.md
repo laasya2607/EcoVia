@@ -103,44 +103,6 @@ npm install
 npm start
 ```
 
----
-
-## Environment Variables
-
-### Frontend (.env)
-
-```
-VITE_ROUTE_API_KEY=YOUR_OPENROUTESERVICE_API_KEY
-```
-
-### Backend (.env)
-
-```
-DB_USER=your_database_user
-DB_HOST=localhost
-DB_NAME=ecovia
-DB_PASSWORD=your_password
-DB_PORT=5432
-JWT_SECRET=your_secret_key
-```
-
----
-
-## Future Enhancements
-
-- Air Quality Index integration
-- Traffic-aware route optimization
-- Safety score based on location data
-- Multi-stop route planning
-- Route history and analytics
-- AI-powered comfort scoring
-- Mobile-responsive enhancements
-
----
-
-## Screenshots
-
-Screenshots of the application can be added here to demonstrate the dashboard, route visualization, weather information, and recommendations.
 
 ---
 
