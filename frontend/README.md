@@ -1,75 +1,153 @@
-# React + TypeScript + Vite
+# EcoVia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EcoVia is an intelligent route planning application that helps users discover routes based on travel preferences, environmental conditions, and accessibility requirements. The application combines mapping, weather information, and personalized recommendations to provide a more informed travel experience than traditional navigation systems.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User authentication with secure login and registration
+- Interactive map with route visualization
+- Search locations using OpenStreetMap Nominatim
+- Route generation using OpenRouteService
+- Multiple travel modes:
+  - Walking
+  - Cycling
+  - Driving
+- Personalized traveller profiles:
+  - Senior Friendly
+  - Wheelchair Accessible
+  - Student Safe
+  - Fitness Route
+  - Office Fast
+- Live weather information for the selected route
+- Estimated travel duration and arrival time
+- Route summary with distance and travel insights
+- Save and reuse frequently visited locations
+- AI-generated travel recommendations based on traveller preferences
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology Stack
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- React Leaflet
+- Axios
+- Lucide React
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Backend
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js
+- Express.js
+- PostgreSQL
+- JWT Authentication
+- bcrypt
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### External APIs
 
-```
+- OpenRouteService API
+- OpenStreetMap Nominatim API
+- Open-Meteo Weather API
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
 
 ```
+EcoVia/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── backend/
+│   ├── routes/
+│   ├── db.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/laasya2607/EcoVia.git
+cd EcoVia
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+---
+
+## Environment Variables
+
+### Frontend (.env)
+
+```
+VITE_ROUTE_API_KEY=YOUR_OPENROUTESERVICE_API_KEY
+```
+
+### Backend (.env)
+
+```
+DB_USER=your_database_user
+DB_HOST=localhost
+DB_NAME=ecovia
+DB_PASSWORD=your_password
+DB_PORT=5432
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## Future Enhancements
+
+- Air Quality Index integration
+- Traffic-aware route optimization
+- Safety score based on location data
+- Multi-stop route planning
+- Route history and analytics
+- AI-powered comfort scoring
+- Mobile-responsive enhancements
+
+---
+
+## Screenshots
+
+Screenshots of the application can be added here to demonstrate the dashboard, route visualization, weather information, and recommendations.
+
+---
+
+## Author
+
+**Laasya Sri**
+
+GitHub: https://github.com/laasya2607
+
+LinkedIn: https://www.linkedin.com/in/laasya-sri-lingala/
